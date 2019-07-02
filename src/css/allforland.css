@@ -773,3 +773,69 @@
 		padding-left: 20px;
 	}
 }
+
+@media (max-width:480px) {
+	/* Sub */
+	ul.list-box > li {
+		width: 100%;
+	}
+	ul.list-box > li {
+		margin-left: 0px;
+		height: auto;
+	}
+	ul.list-box > li:nth-child(3n+1) {
+		margin-left: 0px;
+	}
+	ul.list-box > li:nth-child(2n+1) {
+		margin-left: 0px;
+	}
+	.sub .recruit .table li:last-child .list-box li {
+		height: auto;
+	}
+	ul.table > li .table-th {
+		display: block;
+		width: 100%;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #e7e7e7;
+	}
+	ul.table > li .table-th strong {
+		padding-bottom: 10px;
+	}
+	ul.table > li .table-th strong.arrow:after {
+		display: none;
+	}
+	ul.table > li .table-td {
+		display: block;
+		width: 100%;
+		padding-left: 0px;
+		border-left: 0px;
+	}
+	
+	/* Ceo */
+	.sub .ceo strong br {
+		display: none;
+	}
+	
+	/* Client */
+	.sub .client ul li {
+		width: 50%;
+	}
+}
+
+/* Sian */
+.sub.sian-full-img {
+	max-width: 2000px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.sub.sian-full-img img {
+	width: 100%;
+	max-width: 2000px;
+}
+.sub.sian-img img {
+	width: 100%;
+	max-width: 2000px;
+}
+
+
