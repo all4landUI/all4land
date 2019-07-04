@@ -1,0 +1,214 @@
+/* history */
+.timeline-tab{
+	margin-bottom: 60px;
+}
+.timeline-tab ul{
+	display: table;
+	width: 100%;
+	border: 1px solid #9c9c9c;
+}
+.timeline-tab ul li{
+	display: table-cell;
+	text-align: center;
+	border-left: 1px solid #9c9c9c;
+	height: 60px;
+	line-height: 60px;
+	cursor:pointer;
+}
+.timeline-tab ul li:first-child{
+	border: none;
+}
+.timeline-tab ul li:hover{
+	background: #127ab7;
+	color:#fff;
+}
+.timeline-tab ul li strong{
+	font-size: 22px;
+	margin-right: 20px;
+	color:#333333;
+}
+.timeline-tab ul li span{
+	font-size: 15px;
+	color:#989898;
+}
+.timeline-tab ul li:hover strong,
+.timeline-tab ul li:hover span{
+	color:#fff;
+}
+.timeline-tree{
+	position: relative;
+}
+.timeline-tree:before{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 3px;
+    height: 100%;
+    margin-left: -1px;
+    background-color: #f2f2f2;
+}
+.timeline-tree .line-com{
+	background-repeat: no-repeat;
+}
+.timeline-tree .line-com .yearing{
+	display: table;
+	width: 140px;
+	height: 140px;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	margin: 70px auto 40px;
+	border-radius:100%;
+	color:#fff;
+}
+.timeline-tree .line-com .yearing:after{
+	display: none;
+}
+.timeline-tree .line-com#move1{
+	background-image: url(../../images/bg/timeline01.png);
+	background-position: 0% 90%;
+}
+.timeline-tree .line-com#move2{
+	background-image: url(../../images/bg/timeline02.png);
+	background-position: 100% 90%;
+}
+.timeline-tree .line-com#move3{
+	background-image: url(../../images/bg/timeline03.png);
+	background-position: 0% 70%;
+}
+.timeline-tree .line-com#move1 .yearing{
+	background: #127ab7;
+}
+.timeline-tree .line-com#move2 .yearing{
+	background: #328770;
+}
+.timeline-tree .line-com#move3 .yearing{
+	background: #5674b9;
+}
+.timeline-tree .line-com .yearing ul{
+	display: table-cell;
+	vertical-align: middle;
+}
+.timeline-tree .line-com>li{
+	position: relative;
+	margin-bottom: 40px;
+}
+.timeline-tree .line-com>li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: 0px 0 0 -8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #000;
+    border: 5px solid #ebebeb;
+    border-radius: 100%;
+}
+.timeline-tree .line-com dl{
+	width: 50%;
+    margin: 0 0 0 auto;
+    padding-left: 25px;
+    overflow: hidden;
+}
+.timeline-tree .line-com dl dt{
+	color:#333333;
+	font-size: 22px;
+	font-weight: bold;
+	min-width: 90px;
+}
+.timeline-tree .line-com dl dd{
+	line-height: 1.5;
+}
+.timeline-tree .line-com dl dd:after{
+	display: block;
+	content:'';
+	clear: both;
+}
+.timeline-tree .line-com dl dd span{
+	color:#989898;
+}
+.timeline-tree .line-com dl dd li{
+	padding-left: 47px;
+    text-indent: -47px;
+}
+.timeline-tree .right-line dl,
+.timeline-tree .left-line dl{
+	position: relative;
+	top: -8px;
+    width: 50%;
+    margin: 0 0 0 auto;
+    padding-left: 25px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+.timeline-tree .right-line dl dd span,
+.timeline-tree .left-line dl dd span{
+	margin-right: 20px;
+}
+
+.timeline-tree .line-com#move3>li:last-child {
+	margin-bottom:0;
+	background-color:#fff;
+}
+
+@media (max-width:768px) {
+	.timeline-tree:before{
+		left: 50px;
+	}
+	.timeline-tree .line-com{
+		background: none!important;
+	}
+	.timeline-tree .line-com .yearing{
+		width: 100px;
+		height: 100px;
+		margin: 0 0 30px 0;
+		font-size: 15px;
+	}
+	.timeline-tree .line-com dl{
+		width: 100%;
+		padding-left: 70px;
+	}
+	.timeline-tree .line-com>li:after{
+		left: 50px;
+	}
+	.timeline-tree .line-com dl dt{
+		font-size: 15px;
+	}
+	.timeline-tree .line-com dl dd{
+		font-size: 13px;
+	}
+}
+@media (min-width:768px) {
+	.timeline-tree .left-line dl{
+	    margin-right: auto;
+	    margin-left: 0;
+	    padding-right: 25px;
+	    padding-left: 0;
+	    text-align: right;
+	    width: 50%;
+	    display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		align-content: stretch;
+	}
+	.timeline-tree .left-line dl dd span{
+		margin-left: 20px;
+		margin-right: 0;
+		float: right;
+	}
+	.timeline-tree .line-com.left-line dl dd li{
+		padding-left: 0px;
+    	text-indent: 0px;
+	}
+}
