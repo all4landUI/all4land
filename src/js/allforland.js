@@ -37,20 +37,23 @@ $(function(){
 		}
   	});
 	
+
 	//Hoverdir
 	$('section.business ul > li').each(function() {$(this).hoverdir();});
 	//One Page
 	$('.scoll-dots button').click( function() {
 		var scrollPosition = $(this).attr('id');
 		var slide = $('.' + scrollPosition).offset().top;
-		$('html').animate({scrollTop: slide});
+		
+		$('html,html').animate({scrollTop: slide});
 		$('.scoll-dots button').removeClass('current');
 		$(this).addClass('current');
 		return false;
 	});
 	$('.scroll-btn').click( function() {
-		var slide = $('.business').offset().top;
-		$('html').animate({scrollTop: slide});
+		var slide = $('section.business').offset();
+		var slidetop = slide.top;
+		$('html,body').animate({scrollTop: slidetop});
 		return false;
 	});
 	
@@ -83,6 +86,15 @@ $(function(){
 			event.stopPropagation();
 			return false;
 		});
+	});
+
+	// image_hide_show
+	$('.hide_show-box').on('inview', function(event, isInView) {
+	  if (isInView) {
+	    $(this).addClass('inside')
+	  } else {
+	    // not
+	  }
 	});
 	
 	//parallax
@@ -123,7 +135,8 @@ $(function(){
 	});
 	
 	AOS.init({
-		easing: 'ease-in-out'
+		easing: 'ease-in-out',
+		once : true
 	});
 	
 	//Client Symbol
@@ -209,3 +222,5 @@ function init3D() {
 	});
 }
 	
+
+
