@@ -87,6 +87,7 @@ ul.table > li .table-td figure.thumb.mt0 { margin-top: 0; }
 .row-ea3 { overflow: hidden; margin: 0 -8px; padding-top: 35px; }
 
 .col-comm { float: left; width: 33.3333333%; padding: 0 8px; }
+.col-comm img { width: 100%; }
 .col-comm .thumb-group div { border: 1px solid #f8f8f8; }
 .col-comm .thumb-group div + div { margin-top: 15px; }
 .col-comm dl { overflow: hidden; margin-bottom: 10px; }
@@ -95,26 +96,37 @@ ul.table > li .table-td figure.thumb.mt0 { margin-top: 0; }
 .col-comm dl dd { font-size: 15px; color: #111111; background: #f3f3f3; height: 48px; line-height: 48px; width: calc(100% - 50px); padding-left: 15px; border: 1px solid #ddeaf2; border-right: 0; font-weight: bold; position: relative; }
 .col-comm dl dd:after { content: ""; display: block; position: absolute; right: 0; top: -1px; height: 50px; width: 20px; background: url("../../images/update/arrow_ad.gif") no-repeat 100% 0; }
 
+@media (max-width: 1200px) { .col-comm dl dt, .col-comm dl dd { font-size: 11px; } }
+@media (max-width: 1100px) { .col-comm { width: 50%; }
+  .col-comm dl dt, .col-comm dl dd { font-size: 11px; }
+  .col-comm:nth-child(3) { margin-top: 25px; } }
+@media (max-width: 900px) { .col-comm { width: 100%; }
+  .col-comm:nth-child(2), .col-comm:nth-child(3) { margin-top: 15px; } }
 /* rnd
 */
 .rnd hgroup { background-image: url("../../images/update/bg_rnd.jpg"); }
+@media (max-width: 768px) { .rnd hgroup:after { background-image: url("../../images/update/bg_rnd.jpg"); } }
 
 /*
 * SM
 */
 .sm hgroup { background-image: url("../../images/update/bg_sm.jpg"); }
+@media (max-width: 768px) { .sm hgroup:after { background-image: url("../../images/update/bg_sm.jpg"); } }
 
 /*
 * marine
 */
 .marine hgroup { background-image: url("../../images/update/bg_marine.jpg"); }
+@media (max-width: 768px) { .marine hgroup:after { background-image: url("../../images/update/bg_marine.jpg"); } }
 
 /*
 * survey
 */
 .survey hgroup { background-image: url("../../images/update/bg_survey.jpg"); }
+@media (max-width: 768px) { .survey hgroup:after { background-image: url("../../images/update/bg_survey.jpg"); } }
 
 /*
 * advanced
 */
 .advanced hgroup { background-image: url("../../images/update/bg_advanced.jpg"); }
+@media (max-width: 768px) { .advanced hgroup:after { background-image: url("../../images/update/bg_advanced.jpg"); } }
