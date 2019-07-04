@@ -114,6 +114,15 @@
     margin: 0 0 0 auto;
     padding-left: 25px;
     overflow: hidden;
+    position: relative;
+	top: -8px;
+    padding-left: 25px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
 }
 .timeline-tree .line-com dl dt{
 	color:#333333;
@@ -136,33 +145,50 @@
 	padding-left: 47px;
     text-indent: -47px;
 }
-.timeline-tree .right-line dl,
-.timeline-tree .left-line dl{
-	position: relative;
-	top: -8px;
-    width: 50%;
-    margin: 0 0 0 auto;
-    padding-left: 25px;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
 .timeline-tree .right-line dl dd span,
 .timeline-tree .left-line dl dd span{
 	margin-right: 20px;
 }
-
 .timeline-tree .line-com#move3>li:last-child {
 	margin-bottom:0;
 	background-color:#fff;
 }
+@media (max-width:1120px) {
+	.timeline-tree .line-com{
+		background-size: 45% ;
+	}
+}
+@media (max-width:950px){
+	.timeline-tab ul li{
+		height: 35px;
+		line-height: 35px;
+	}
+	.timeline-tab ul li strong{
+		display: block;
+		font-size: 18px;
+		margin: 0
+	}
+	.timeline-tab ul li span{
+		font-size: 15px;
+	}
 
+}
 @media (max-width:768px) {
+
 	.timeline-tree:before{
 		left: 50px;
+	}
+	.timeline-tab ul li{
+		height: 25px;
+		line-height: 25px;
+	}
+	.timeline-tab ul li strong{
+		display: block;
+		font-size: 15px;
+		margin: 0
+	}
+	.timeline-tab ul li span{
+		font-size: 13px;
 	}
 	.timeline-tree .line-com{
 		background: none!important;
@@ -176,6 +202,8 @@
 	.timeline-tree .line-com dl{
 		width: 100%;
 		padding-left: 70px;
+		display: block;
+		top: -2px
 	}
 	.timeline-tree .line-com>li:after{
 		left: 50px;
