@@ -1529,6 +1529,8 @@ hgroup.main-title p {
 	.main section.client {
 	    background: url(../../images/bg/bg-client.png) no-repeat center bottom;
 		background-attachment: fixed;
+		overflow:hidden;
+		height:900px;
 	}
 	.main section.client .scroll-bg img {
 		display: none;
@@ -1706,6 +1708,9 @@ hgroup.main-title p {
 	/* Client */
 	.main section.client {
 		height: 600px;
+	}
+	.main section.client .symbol-client{
+		margin-top:120px;
 	}
 	.main section.client .symbol-client p img {
 		width: 50%

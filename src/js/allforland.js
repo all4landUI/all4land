@@ -42,19 +42,23 @@ $(function(){
 	$('section.business ul > li').each(function() {$(this).hoverdir();});
 	//One Page
 	$('.scoll-dots button').click( function() {
+		
 		var scrollPosition = $(this).attr('id');
 		var slide = $('.' + scrollPosition).offset().top;
 		
-		$('html,html').animate({scrollTop: slide});
+		$('html,body').animate({scrollTop: slide});
 		$('.scoll-dots button').removeClass('current');
 		$(this).addClass('current');
 		return false;
 	});
+
 	$('.scroll-btn').click( function() {
-		var slide = $('section.business').offset();
-		var slidetop = slide.top;
-		$('html,body').animate({scrollTop: slidetop});
-		return false;
+		if($('main.main').length == 1){
+			var slide = $('section.business').offset();
+			var slidetop = slide.top;
+			$('html,body').animate({scrollTop: slidetop});
+			return false;	
+		}
 	});
 	
 	// Menu Open
@@ -216,7 +220,7 @@ function init3D() {
 		TweenMax.to($(this).data("imgOuter"), 2, {
 			rotationX: 0,
 			rotationY: 0,
-			transformOrigin: origin,
+			//transformOrigin: origin,
 			ease: Expo.easeOut
 		});
 	});
