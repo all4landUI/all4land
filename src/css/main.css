@@ -1787,7 +1787,7 @@ hgroup.main-title p {
 	/* Client */
 	.main section.client {
 		overflow: hidden;
-		height: 450px;
+		height: 585px;
 	}
 	.main section.client .symbol-client p img {
 		width: 40%
