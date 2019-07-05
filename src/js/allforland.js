@@ -2,6 +2,8 @@
 $(function(){
 		
 	
+	
+
 	// Header
 	$('header.home nav').hover(function() {
 		$('header.home nav ul ul').stop(true, false, true).slideToggle(300);			
@@ -44,19 +46,23 @@ $(function(){
 	$('section.business ul > li').each(function() {$(this).hoverdir();});
 	//One Page
 	$('.scoll-dots button').click( function() {
+		
 		var scrollPosition = $(this).attr('id');
 		var slide = $('.' + scrollPosition).offset().top;
 		
-		$('html,html').animate({scrollTop: slide});
+		$('html,body').animate({scrollTop: slide});
 		$('.scoll-dots button').removeClass('current');
 		$(this).addClass('current');
 		return false;
 	});
+
 	$('.scroll-btn').click( function() {
-		var slide = $('section.business').offset();
-		var slidetop = slide.top;
-		$('html,body').animate({scrollTop: slidetop});
-		return false;
+		if($('main.main').length == 1){
+			var slide = $('section.business').offset();
+			var slidetop = slide.top;
+			$('html,body').animate({scrollTop: slidetop});
+			return false;	
+		}
 	});
 	
 	// Menu Open
@@ -90,7 +96,17 @@ $(function(){
 		});
 	});
 
-	// image_hide_show
+	
+	$('.title-cate, .title-sub, .hr-ti').addClass('animated')
+	$('.title-cate, .title-sub, .hr-ti').on('inview', function(event, isInView) {
+	  if (isInView) {
+	    $('.title-cate, .title-sub, .hr-ti').addClass('fadeInUp')
+	  } else {
+	    // not
+	  }
+	});	
+	
+
 	$('.hide_show-box').on('inview', function(event, isInView) {
 	  if (isInView) {
 	    $(this).addClass('inside')
@@ -98,6 +114,8 @@ $(function(){
 	    // not
 	  }
 	});
+	
+	
 	
 	//parallax
 	$(window).scroll(function(e) {
@@ -123,7 +141,9 @@ $(function(){
 			$('aside').css('display','none');
 		}
 		if(scrollWindow >= oneStart / 2){
-			$('.business').offset().top;	
+			if($('main.main').length == 1){
+				$('.business').offset().top;	
+			}
 		}
 		$('#contents > section').each(function() {
 			var activeSection = $(this).attr('class');
@@ -218,7 +238,7 @@ function init3D() {
 		TweenMax.to($(this).data("imgOuter"), 2, {
 			rotationX: 0,
 			rotationY: 0,
-			transformOrigin: origin,
+			//transformOrigin: origin,
 			ease: Expo.easeOut
 		});
 	});
