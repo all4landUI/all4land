@@ -456,6 +456,9 @@
     margin-bottom: 90px;
     border: 1px solid #e7e7e7;
 }
+.sub .map > div img{
+	width:100%;
+}
 .sub .map .map-marker {
     padding: 10px;
     text-align: center;
