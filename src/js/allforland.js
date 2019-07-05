@@ -1,4 +1,6 @@
+
 $(function(){
+		
 	
 	// Header
 	$('header.home nav').hover(function() {
@@ -220,7 +222,9 @@ function init3D() {
 			ease: Expo.easeOut
 		});
 	});
+
 }
+
 	
 
 

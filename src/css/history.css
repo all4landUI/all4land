@@ -14,6 +14,7 @@
 	height: 60px;
 	line-height: 60px;
 	cursor:pointer;
+	transition: all 0.3s ease-in;
 }
 .timeline-tab ul li:first-child{
 	border: none;
@@ -177,6 +178,9 @@
 
 	.timeline-tree:before{
 		left: 50px;
+	}
+	.timeline-tab{
+		margin-bottom: 40px
 	}
 	.timeline-tab ul li{
 		height: 25px;
