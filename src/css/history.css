@@ -235,12 +235,16 @@
 		align-content: stretch;
 	}
 	.timeline-tree .left-line dl dd span{
-		margin-left: 20px;
+		margin-left: 0;
 		margin-right: 0;
-		float: right;
+		float:none;
+		position:absolute;
+		right:0;
 	}
 	.timeline-tree .line-com.left-line dl dd li{
 		padding-left: 0px;
     	text-indent: 0px;
+    	padding-right:45px;
+    	position:relative;
 	}
 }
